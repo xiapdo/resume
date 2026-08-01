@@ -1,0 +1,184 @@
+[
+  {
+    "name": "basketball-large",
+    "file": "assets/stickers/basketball-large.png",
+    "sourceBox": {
+      "name": "basketball-large",
+      "x": 78,
+      "y": 72,
+      "w": 356,
+      "h": 342
+    },
+    "width": 328,
+    "height": 327
+  },
+  {
+    "name": "tiktok-logo",
+    "file": "assets/stickers/tiktok-logo.png",
+    "sourceBox": {
+      "name": "tiktok-logo",
+      "x": 514,
+      "y": 74,
+      "w": 262,
+      "h": 326
+    },
+    "width": 258,
+    "height": 315
+  },
+  {
+    "name": "boy-holding-ball",
+    "file": "assets/stickers/boy-holding-ball.png",
+    "sourceBox": {
+      "name": "boy-holding-ball",
+      "x": 872,
+      "y": 72,
+      "w": 334,
+      "h": 374
+    },
+    "width": 315,
+    "height": 374
+  },
+  {
+    "name": "arm-sleeve",
+    "file": "assets/stickers/arm-sleeve.png",
+    "sourceBox": {
+      "name": "arm-sleeve",
+      "x": 1265,
+      "y": 87,
+      "w": 318,
+      "h": 290
+    },
+    "width": 280,
+    "height": 283
+  },
+  {
+    "name": "blue-orange-sneaker",
+    "file": "assets/stickers/blue-orange-sneaker.png",
+    "sourceBox": {
+      "name": "blue-orange-sneaker",
+      "x": 1604,
+      "y": 96,
+      "w": 384,
+      "h": 248
+    },
+    "width": 359,
+    "height": 248
+  },
+  {
+    "name": "orange-sneaker",
+    "file": "assets/stickers/orange-sneaker.png",
+    "sourceBox": {
+      "name": "orange-sneaker",
+      "x": 103,
+      "y": 489,
+      "w": 398,
+      "h": 272
+    },
+    "width": 367,
+    "height": 251
+  },
+  {
+    "name": "jump-shot-boy",
+    "file": "assets/stickers/jump-shot-boy.png",
+    "sourceBox": {
+      "name": "jump-shot-boy",
+      "x": 532,
+      "y": 452,
+      "w": 316,
+      "h": 650
+    },
+    "width": 316,
+    "height": 645
+  },
+  {
+    "name": "whistle",
+    "file": "assets/stickers/whistle.png",
+    "sourceBox": {
+      "name": "whistle",
+      "x": 908,
+      "y": 522,
+      "w": 318,
+      "h": 184
+    },
+    "width": 303,
+    "height": 184
+  },
+  {
+    "name": "water-bottle",
+    "file": "assets/stickers/water-bottle.png",
+    "sourceBox": {
+      "name": "water-bottle",
+      "x": 1300,
+      "y": 456,
+      "w": 192,
+      "h": 326
+    },
+    "width": 190,
+    "height": 317
+  },
+  {
+    "name": "basket-hoop",
+    "file": "assets/stickers/basket-hoop.png",
+    "sourceBox": {
+      "name": "basket-hoop",
+      "x": 1620,
+      "y": 404,
+      "w": 333,
+      "h": 365
+    },
+    "width": 325,
+    "height": 350
+  },
+  {
+    "name": "running-girl",
+    "file": "assets/stickers/running-girl.png",
+    "sourceBox": {
+      "name": "running-girl",
+      "x": 101,
+      "y": 814,
+      "w": 348,
+      "h": 316
+    },
+    "width": 322,
+    "height": 289
+  },
+  {
+    "name": "running-boy",
+    "file": "assets/stickers/running-boy.png",
+    "sourceBox": {
+      "name": "running-boy",
+      "x": 909,
+      "y": 782,
+      "w": 303,
+      "h": 325
+    },
+    "width": 277,
+    "height": 312
+  },
+  {
+    "name": "jersey-5",
+    "file": "assets/stickers/jersey-5.png",
+    "sourceBox": {
+      "name": "jersey-5",
+      "x": 1321,
+      "y": 840,
+      "w": 286,
+      "h": 288
+    },
+    "width": 223,
+    "height": 266
+  },
+  {
+    "name": "trophy",
+    "file": "assets/stickers/trophy.png",
+    "sourceBox": {
+      "name": "trophy",
+      "x": 1674,
+      "y": 817,
+      "w": 307,
+      "h": 320
+    },
+    "width": 271,
+    "height": 298
+  }
+]

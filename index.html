@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="董真材的 Java 后端与 AI Agent 开发方向个人简历网页" />
+    <title>董真材 | Java 后端 / AI Agent 开发工程师</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script defer src="./src/main.js"></script>
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="contact-toast" role="status" aria-live="polite"></div>
+    <header class="topbar" data-state="top">
+      <a class="brand-mark" href="#top" aria-label="回到顶部">DZC</a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#skills" data-section="skills">技能</a>
+        <a href="#internships" data-section="internships">实习</a>
+        <a href="#projects" data-section="projects">项目</a>
+        <a href="#contact" data-section="contact">联系</a>
+      </nav>
+      <div class="nav-progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="court-lines" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Java Backend / AI Agent / RAG Pipeline</p>
+          <h1>董真材</h1>
+          <p class="role">把后端工程能力，贴进会自动行动的 AI 系统里。</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="mailto:3283524938@qq.com">联系我</a>
+            <a class="ghost-action" href="https://gitee.com/zysdzc/py-boss-ai" target="_blank" rel="noreferrer">查看项目</a>
+          </div>
+          <dl class="quick-stats">
+            <div><dt>日处理</dt><dd>50+ HR 会话</dd></div>
+            <div><dt>检索提升</dt><dd>Recall@5 +70%</dd></div>
+            <div><dt>LLM 调用</dt><dd>降低 60%+</dd></div>
+          </dl>
+        </div>
+
+        <div class="model-stage" aria-label="贴纸化 3D 人物模型展示">
+          <div class="stage-ring" aria-hidden="true"></div>
+          <model-viewer class="portrait-model" src="./public/assets/models/11-stickered.glb" poster="./public/assets/reference/front.png" alt="贴满篮球贴纸效果的人物 3D 模型" camera-controls auto-rotate rotation-per-second="22deg" shadow-intensity="0.8" exposure="1.05" camera-orbit="0deg 84deg 2.7m" field-of-view="31deg">
+            <img slot="poster" src="./public/assets/reference/front.png" alt="贴纸化人物模型预览" />
+          </model-viewer>
+          <figure class="boy-companion">
+            <img src="./public/assets/reference/boy-cutout.png" alt="董真材人物形象" />
+            <figcaption>Agent ready</figcaption>
+          </figure>
+          <img class="sticker sticker-a" src="./public/assets/stickers/basketball-large.png" alt="" />
+          <img class="sticker sticker-b" src="./public/assets/stickers/trophy.png" alt="" />
+          <img class="sticker sticker-c" src="./public/assets/stickers/jersey-5.png" alt="" />
+        </div>
+      </section>
+
+      <section class="identity-strip reveal-block" id="contact" aria-label="基础信息">
+        <a class="contact-card action-card" href="tel:19112088223" data-copy="19112088223" data-toast="电话已复制，可以直接拨号">
+          <span>电话</span><strong>19112088223</strong><em>点击拨号 / 复制</em>
+        </a>
+        <a class="contact-card action-card" href="mailto:3283524938@qq.com" data-copy="3283524938@qq.com" data-toast="邮箱已复制，可以直接发邮件">
+          <span>邮箱</span><strong>3283524938@qq.com</strong><em>点击发邮件 / 复制</em>
+        </a>
+        <div class="contact-card"><span>学校</span><strong>重庆邮电大学移通学院</strong><em>本科 · 电气工程及其自动化</em></div>
+        <div class="contact-card"><span>毕业</span><strong>2027-6</strong><em>Java 后端 / Agent 开发</em></div>
+      </section>
+
+      <section class="section-band skills-band reveal-block" id="skills">
+        <div class="section-heading"><p class="eyebrow">Skill Court</p><h2>技能特长</h2></div>
+        <div class="skill-grid" id="skillGrid"></div>
+      </section>
+
+      <section class="section-band timeline-band reveal-block" id="internships">
+        <div class="section-heading"><p class="eyebrow">Live System</p><h2>实习经历</h2></div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section class="section-band project-band reveal-block" id="projects">
+        <div class="project-shell">
+          <div class="section-heading"><p class="eyebrow">Signature Project</p><h2>Job AI 全自动化系统</h2></div>
+          <div class="project-board" id="projectBoard"></div>
+        </div>
+      </section>
+
+      <section class="section-band flow-band reveal-block" aria-label="AI 开发工作流">
+        <div class="flow-copy">
+          <p class="eyebrow">Reusable Workflow</p>
+          <h2>从表设计到代码评审的 AI 辅助链路</h2>
+          <p>熟练运用 Trae、Windsurf、CodeBuddy 等 AI 工具，结合自定义 Skills 与数据库 MCP 连接器，把后端建模、前后端开发、评审修正沉淀成可复用工作流。</p>
+        </div>
+        <ol class="flow-steps">
+          <li>数据库表设计</li>
+          <li>接口与服务生成</li>
+          <li>前端联调</li>
+          <li>代码评审闭环</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
