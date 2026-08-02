@@ -55,19 +55,31 @@ function el(tag, className, text) {
   return node;
 }
 
+function createSkillTile(skill, index, isClone = false) {
+  const tile = el("article", "skill-tile");
+  tile.tabIndex = isClone ? -1 : 0;
+  tile.style.setProperty("--tilt", index % 2 ? "1.5deg" : "-1.2deg");
+  if (isClone) tile.setAttribute("aria-hidden", "true");
+  const sticker = el("img", "skill-sticker");
+  sticker.src = "./public/assets/stickers/" + stickerFiles[(index * 2 + 3) % stickerFiles.length] + ".png";
+  sticker.alt = "";
+  tile.append(sticker, el("span", "", skill.tag), el("h3", "", skill.title), el("p", "", skill.text), el("small", "", "Hover to unlock"));
+  return tile;
+}
+
 function renderSkills() {
   const grid = document.querySelector("#skillGrid");
   if (!grid) return;
+  const track = el("div", "skill-marquee-track");
+  const originalSet = el("div", "skill-marquee-set");
+  const cloneSet = el("div", "skill-marquee-set");
+  cloneSet.setAttribute("aria-hidden", "true");
   resume.skills.forEach((skill, index) => {
-    const tile = el("article", "skill-tile");
-    tile.tabIndex = 0;
-    tile.style.setProperty("--tilt", index % 2 ? "1.5deg" : "-1.2deg");
-    const sticker = el("img", "skill-sticker");
-    sticker.src = "./public/assets/stickers/" + stickerFiles[(index * 2 + 3) % stickerFiles.length] + ".png";
-    sticker.alt = "";
-    tile.append(sticker, el("span", "", skill.tag), el("h3", "", skill.title), el("p", "", skill.text), el("small", "", "Hover to unlock"));
-    grid.append(tile);
+    originalSet.append(createSkillTile(skill, index));
+    cloneSet.append(createSkillTile(skill, index, true));
   });
+  track.append(originalSet, cloneSet);
+  grid.append(track);
 }
 
 function renderTimeline() {

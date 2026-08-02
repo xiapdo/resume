@@ -56,7 +56,7 @@ main { position: relative; }
 .portrait-model { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 34px 40px rgba(0, 0, 0, 0.38)); }
 .portrait-model::part(default-progress-bar) { background-color: var(--orange); }
 .portrait-model img { width: 100%; height: 100%; object-fit: contain; }
-.boy-companion { position: absolute; left: -64px; bottom: 64%; z-index: 2; width: clamp(128px, 13vw, 230px); margin: 0; padding: 10px 10px 42px; border: 3px solid var(--paper); background: linear-gradient(160deg, rgba(255, 246, 230, 0.95), rgba(53, 208, 223, 0.82)); color: var(--ink); box-shadow: 10px 10px 0 rgba(255, 122, 26, 0.85); transform: rotate(-5deg); transition: transform 0.24s ease, box-shadow 0.24s ease; }
+.boy-companion { position: absolute; left: -212px; bottom: 64%; z-index: 2; width: clamp(128px, 13vw, 230px); margin: 0; padding: 10px 10px 42px; border: 3px solid var(--paper); background: linear-gradient(160deg, rgba(255, 246, 230, 0.95), rgba(53, 208, 223, 0.82)); color: var(--ink); box-shadow: 10px 10px 0 rgba(255, 122, 26, 0.85); transform: rotate(-5deg); transition: transform 0.24s ease, box-shadow 0.24s ease; }
 .boy-companion:hover { transform: rotate(-2deg) translateY(-8px) scale(1.04); box-shadow: 14px 14px 0 rgba(53, 208, 223, 0.85); -webkit-transform: rotate(-2deg) translateY(-8px) scale(1.04); -moz-transform: rotate(-2deg) translateY(-8px) scale(1.04); -ms-transform: rotate(-2deg) translateY(-8px) scale(1.04); -o-transform: rotate(-2deg) translateY(-8px) scale(1.04); }
 .boy-companion img { display: block; width: 100%; height: auto; object-fit: contain; }
 .boy-companion figcaption { position: absolute; left: 10px; right: 10px; bottom: 10px; padding: 7px 10px; background: var(--ink); color: var(--gold); border-radius: 999px; text-align: center; font-family: Georgia, "Times New Roman", serif; font-weight: 900; }
@@ -76,11 +76,14 @@ main { position: relative; }
 .section-heading { max-width: 860px; margin-bottom: 34px; }
 .section-heading h2, .flow-copy h2 { margin: 0; font-family: Georgia, "Times New Roman", "Microsoft YaHei", serif; font-size: clamp(42px, 7vw, 92px); line-height: 0.95; }
 .skills-band { background: linear-gradient(90deg, rgba(255, 122, 26, 0.16) 1px, transparent 1px), linear-gradient(0deg, rgba(255, 246, 230, 0.08) 1px, transparent 1px); background-size: 76px 76px; overflow: hidden; }
-.skill-grid { display: grid; grid-template-columns: repeat(7, minmax(190px, 1fr)); gap: 18px; overflow-x: auto; padding: 32px 0 42px; scroll-snap-type: x proximity; }
-.skill-tile { --mx: 50%; --my: 50%; position: relative; isolation: isolate; min-height: 282px; padding: 22px; color: var(--ink); background: radial-gradient(circle at var(--mx) var(--my), rgba(53, 208, 223, 0.32), transparent 35%), var(--paper); border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--orange); transform: rotate(var(--tilt)) translateY(18px); opacity: 0; transition: opacity 0.5s ease, transform 0.32s cubic-bezier(.2,.9,.2,1), box-shadow 0.32s ease, background 0.32s ease; scroll-snap-align: center; cursor: pointer; overflow: hidden; }
+.skill-grid { position: relative; overflow: hidden; padding: 32px 0 42px; mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+.skill-marquee-track { display: flex; width: max-content; animation: skills-marquee 38s linear infinite; will-change: transform; }
+.skill-grid:hover .skill-marquee-track, .skill-grid:focus-within .skill-marquee-track { animation-play-state: paused; }
+.skill-marquee-set { display: flex; flex: 0 0 auto; gap: 18px; padding-right: 18px; }
+.skill-tile { --mx: 50%; --my: 50%; position: relative; isolation: isolate; flex: 0 0 clamp(240px, 24vw, 330px); min-height: 282px; padding: 22px; color: var(--ink); background: radial-gradient(circle at var(--mx) var(--my), rgba(53, 208, 223, 0.32), transparent 35%), var(--paper); border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--orange); transform: rotate(var(--tilt)) translateY(18px); opacity: 0; transition: opacity 0.5s ease, transform 0.32s cubic-bezier(.2,.9,.2,1), box-shadow 0.32s ease, background 0.32s ease; cursor: pointer; overflow: hidden; }
 .skill-tile::before { content: ""; position: absolute; inset: -2px; z-index: -1; background: linear-gradient(135deg, transparent, rgba(255, 122, 26, 0.45), rgba(53, 208, 223, 0.35), transparent); opacity: 0; transition: opacity 0.25s ease; }
 .skill-tile::after { content: "CLICK"; position: absolute; right: 16px; bottom: 14px; color: rgba(16, 22, 35, 0.12); font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weight: 900; }
-.skill-tile.is-visible { opacity: 1; transform: rotate(var(--tilt)) translateY(0); }
+.skill-tile.is-visible, .skills-band.is-visible .skill-tile { opacity: 1; transform: rotate(var(--tilt)) translateY(0); }
 .skill-tile:hover, .skill-tile:focus-visible { z-index: 4; transform: rotate(0deg) translateY(-18px) scale(1.08); box-shadow: 16px 18px 0 rgba(255, 122, 26, 0.95), 0 0 0 8px rgba(53, 208, 223, 0.24); animation: skill-wiggle 0.46s ease both; outline: none; }
 .skill-tile:hover::before, .skill-tile:focus-visible::before { opacity: 1; }
 .skill-tile span { display: inline-flex; padding: 6px 10px; background: var(--cyan); color: var(--ink); border-radius: 999px; font-size: 12px; font-weight: 900; }
@@ -124,10 +127,13 @@ main { position: relative; }
 .flow-steps li:hover { transform: translateY(-8px) rotate(1deg); box-shadow: 9px 9px 0 var(--cyan); }
 .flow-steps li::before { counter-increment: step; content: "0" counter(step); display: block; margin-bottom: 28px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: 42px; }
 @keyframes floaty { 0%, 100% { translate: 0 0; } 50% { translate: 0 -16px; } }
+@keyframes skills-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes skill-wiggle { 0% { rotate: 0deg; } 25% { rotate: -1.3deg; } 52% { rotate: 1.1deg; } 78% { rotate: -0.55deg; } 100% { rotate: 0deg; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; } }
 @media (max-width: 980px) { .hero, .project-board, .flow-band { grid-template-columns: 1fr; } .model-stage { min-height: 560px; } .identity-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .project-intro { position: relative; top: auto; } .boy-companion { left: 4%; bottom: 0; width: clamp(112px, 28vw, 180px); } }
 @media (max-width: 640px) { .topbar { align-items: flex-start; gap: 16px; } .nav { flex-wrap: wrap; justify-content: flex-end; } .hero { padding-top: 128px; } .quick-stats, .identity-strip, .timeline-item, .flow-steps { grid-template-columns: 1fr; } .skill-grid { grid-template-columns: 1fr; overflow: visible; } .skill-tile:hover, .skill-tile:focus-visible { transform: translateY(-10px) scale(1.02); } .timeline-marker { width: 72px; height: 72px; font-size: 26px; } .project-cards article { grid-template-columns: 64px minmax(0, 1fr); } .project-cards span { display: none; } .project-cards img { width: 58px; } .boy-companion { position: relative; left: auto; bottom: auto; margin: 0 auto; } }
+@media (prefers-reduced-motion: reduce) { .skill-marquee-track { animation: none !important; transform: none !important; } }
+@media (max-width: 640px) { .skill-grid { overflow: hidden; } .skill-marquee-track { animation-duration: 30s; } .skill-tile { flex-basis: min(76vw, 300px); } }
 
 /* Fixed nav guard */
 .topbar { position: fixed; top: 0; left: 0; right: 0; }
